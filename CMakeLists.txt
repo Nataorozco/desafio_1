@@ -9,7 +9,18 @@ add_custom_target(Documentacion SOURCES
     README.md
 )
 
-add_executable(desafio_1 main.cpp)
+add_executable(desafio_1
+    main.cpp
+    src/configuracion.cpp
+    include/configuracion.h
+    src/movimiento.cpp
+    include/movimiento.h
+    src/mecanica.cpp
+    include/mecanica.h
+    src/frontend.cpp
+    include/frontend.h
+)
+
 
 include(GNUInstallDirs)
 install(TARGETS desafio_1
@@ -17,5 +28,6 @@ install(TARGETS desafio_1
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
+target_include_directories(desafio_1 PRIVATE include)
 
 install(FILES README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
