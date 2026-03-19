@@ -2,9 +2,6 @@
 
 using namespace std;
 
-unsigned int rules = 0b000'000'000;
-unsigned int multiploDeOCHO = 0b1;
-
 void ingresarDimencionesTablero(){
     int altura;
     int ancho;
