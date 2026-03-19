@@ -13,13 +13,13 @@ void ingresarDimencionesTablero(){
     do {
         cout << "Ingrese la altura del tablero que desea\n(SOLO MULTIPLOS DE 8 'OHCO')\n>> ";
         cin >> altura;
-    } while (altura&7==0);
+    } while ((altura&7)!=0);
 
     do {
 
         cout << "Ingrese la ancho del tablero que desea\n(SOLO MULTIPLOS DE 8 'OHCO')\n>> ";
         cin >> ancho;
-    } while (altura&7==0);
+    } while ((ancho&7)!=0);
 
 }
 
