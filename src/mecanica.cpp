@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int ProcesarMovimientoActualizaTableroConAccionFichaTablero(){
+void ProcesarMovimientoActualizaTableroConAccionFichaTablero(){
     cout << "Realiza un moviento" << endl;
 
-    return 0;
 }

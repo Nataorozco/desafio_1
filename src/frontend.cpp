@@ -3,10 +3,9 @@
 using namespace std;
 
 
-int LimpiarFilaEnElTablero(){
+void LimpiarFilaEnElTablero(){
     cout << "limpiar fila" << endl;
 
-return 0;
 }
 
 void mostrarEstadoDeTablero(int filas,int columnas){
