@@ -26,3 +26,8 @@ void ingresarDimencionesTablero(){
     } while ((ancho&7)!=0);
 
 }
+
+int creacionTablero(int altura, int ancho){
+    cout << "Creando Tablero con " << altura << "x" << ancho << endl;
+
+}
