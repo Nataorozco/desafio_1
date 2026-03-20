@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void ingresarDimencionesTablero(){
+void ingresarDimencionesTablero(int* alturaPtr, int* anchoPtr){
     int altura;
     int ancho;
 
@@ -24,10 +24,12 @@ void ingresarDimencionesTablero(){
             cout << "El tamaño de ancho que inseste no es valido (solo multiplos de 8)" << endl;
         }
     } while ((ancho&7)!=0);
-
+    
+    *alturaPtr = altura;
+    *anchoPtr = ancho;
 }
 
-int creacionTablero(int altura, int ancho){
+void creacionTablero(unsigned char* &tablero, int altura, int ancho){ // Esta funcion debe recibir la direccion en memoria del array que contiene el tablero
     cout << "Creando Tablero con " << altura << "x" << ancho << endl;
-
+    tablero = new unsigned char[(altura * ancho) / 8]{0};
 }

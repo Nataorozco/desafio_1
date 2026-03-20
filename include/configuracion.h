@@ -2,7 +2,7 @@
 #ifndef CONFIGURACION_H
 #define CONFIGURACION_H
 
-    void ingresarDimencionesTablero();
-    void creacionTablero(int* altura, int* ancho);
+    void ingresarDimencionesTablero(int*, int*);
+    void creacionTablero(unsigned char* &tablero, int altura, int ancho);
 
 #endif
