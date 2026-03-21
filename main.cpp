@@ -1,18 +1,58 @@
+#include <iostream>
+
 #include "configuracion.h"
 #include "frontend.h"
+
+typedef unsigned long long paquete64;
 
 int main()
 {
 
-    int altura, ancho;
-    unsigned char* tablero;
-    altura = 0;
-    ancho = 0;
+    int altura, ancho, tamanioTablero;
+    // altura = 0;
+    // ancho = 0;
+    tamanioTablero = 0;
+    //
+    // ingresarDimencionesTablero(&altura, &ancho);
+    //
+    // tamanioTablero = (altura/8)*(ancho/8);
+    //
+    tamanioTablero=2;
+    paquete64* tablero = new paquete64[tamanioTablero];
 
-    ingresarDimencionesTablero(&altura, &ancho);
+    tablero[0] = 0b10000000'00000000'00000000'00000000'00000000'00000000'00000000'00000000;
+                                             unsigned char mascaraModificadora =0b00000001;
 
-    // Prueba de coneccion con la funcion en frontend
-    mostrarEstadoDeTablero(altura,ancho);
+    paquete64 paquetePrueba = tablero[0];
+
+    unsigned char bitActual = 0b0;
+
+    for (int i = 63; i >= 0; --i) {
+        unsigned char bitActual = paquetePrueba >> i;
+        std::cout << (bitActual & 1);
+        if (((i+1)&7)==0) {
+            std::cout << '\n';
+        }
+    }
+
+
+    std::cout << '\n' << tablero[0] << std::endl;
+
+    //unsigned char mascaraModificadora = 0b00000001;
+
+
+    tablero[0] = (tablero[0] or mascaraModificadora);
+
+
+    //std::cout << tablero[0] << std::endl;
+
+    //for (int i = 1; i <= tamanioTablero ; i++) {
+
+    //}
+
+    //mostrarEstadoDeTablero(altura,ancho);
+
+    delete tablero;
 
     return 0;
 }
