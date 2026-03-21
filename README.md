@@ -64,12 +64,12 @@ Usando lo que ya mencionamos acerca de crear un byte personalizado, mejor conoci
 
 **Ejemplo:**
 
-```cpp
-unsigned char mascaraBase = 0b00000000;      // Esta es la máscara base
-unsigned char mascaraModificadora = 0b00100000; // Esta es la máscara modificadora
+```c++
+    unsigned char mascaraBase = 0b00000000;      // Esta es la máscara base
+    unsigned char mascaraModificadora = 0b00100000; // Esta es la máscara modificadora
 
-Al operar:
-mascaraBase = (mascaraBase | mascaraModificadora);
+    Al operar:
+    mascaraBase = (mascaraBase | mascaraModificadora);
 ```
 
 Obtenemos que `mascaraBase` pasó de ser `0b00000000` a `0b00100000`.
@@ -78,7 +78,36 @@ Obtenemos que `mascaraBase` pasó de ser `0b00000000` a `0b00100000`.
 
 Hasta este momento hemos usado mascaras de **8bits** (**1byte**), mendiante char, bajo la misma premisa de poder derfinir cada bits en el conjunto, contamos con las siguientes alternativas:
 
-1. 
+1. **8 bits:** unsigned char 
+2. **16 bits:** unsigned short 
+3. **32 bits:** unsigned int (en la mayoría de arquitecturas modernas)
+4. **64 bits:** unsigned long long (garantizado de al menos 64 bits)
+
+## Uso de typedef
+
+Llegamos a un punto de interes para nosotros, porque encontramos que podemos empaquetar **64bis** sin librerias, pero es de imaginarse un codigo lleno de **unsigned long long**, y gracias a un libro llamado **Como programo en C++ de los autores P.J. DEITEL y H.M DEITEL** dimos con la posibilidad de darle un apodo a esa **asignacion de memoria**.
+
+````c++
+    typedef unsigned long long paquete64;
+````
+
+## ¿Como cambia la modificacion de bits en paquetes de bits mas grandes?.
+
+Como vimos en el ejemplo anterior podemos modificar los bits de una mascara con una mascara modificadora y no es casualidad de que la mascara tenga tambien la misma cantidad de bist. Por lo que en escencia es lo mismo; ejemplo acontinuacion con `paquete`
+
+````c++
+    typedef unsigned long long paquete64;
+
+    paquete64* paqueteBase = 0b00000000'00000000'00000000'00000000'00000000'00000000'00000000'00000000;
+    paquete64* paqueteModificador = 0b00000000'00000000'00000000'00000000'00000000'00001000'00000000'00000000;
 
 
-## ¿Como evito nombres largos al crear agrup
+    Al operar:
+    paqueteBase = (paqueteBase | paqueteModificador);
+````
+
+Obtenemos que `paqueteBase` pasó de ser `0b00000000'00000000'00000000'00000000'00000000'00000000'00000000'00000000;` a `0b00000000'00000000'00000000'00000000'00000000'00001000'00000000'00000000`.
+
+## ¿Hay alguna forma de evitar escribir toda la mascara modificadora?
+
+Pasamos a investigar, de por si no cuesta mucho **escribir 64 bits para la mascara modificadora** pero hacerlo inicializar para inicializar todo en 0, **¿No es lo mismo poner 0b0 que 0b0000000000?**.
