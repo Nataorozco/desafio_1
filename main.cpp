@@ -1,6 +1,5 @@
 #include "configuracion.h"
 #include "frontend.h"
-#include "movimiento.h"
 
 typedef unsigned long long paquete64;
 typedef unsigned short paquete16;
@@ -15,7 +14,6 @@ int main()
     altura = 0;
     ancho = 0;
     paquete64* tablero;
-    paquete16 fichas[5];
 
     ingresarDimencionesTablero(&altura, &ancho);
 
@@ -28,7 +26,7 @@ int main()
     }
 
     mostrarEstadoDeTablero(altura,ancho,tablero);
-    ingresarMovimiento();
+
 
     delete[] tablero;
 

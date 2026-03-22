@@ -6,6 +6,6 @@
     void moverDerecha();
     void bajarPieza();
     void rotarPieza();
-    void seleccionarUnaFichaAleatoriamente();
+    void ingregarFichaAletoriaEnTablero();
 
 #endif
