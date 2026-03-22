@@ -20,6 +20,10 @@ Es una unidad de información digital que equivale a un conjunto de 8 bits.
 
 **Dato curioso:** La palabra byte viene de "bite" (mordisco en inglés), haciendo referencia a un "trozo" de datos que la computadora puede morder.
 
+USO PRINCIPAL:
+Bits para velocidad
+Bytes para almacenamiento.
+En resumen se estan creando arreglos de bytes donde cada byte el estado de 8 casillas de tablero para ahorrar espacio.
 ---
 
 **Acerca de esta actividad:** El juego Tetris debe ser desarrollado en C++.
@@ -111,6 +115,7 @@ Obtenemos que `paqueteBase` pasó de ser `0b00000000'00000000'00000000'00000000'
 ## ¿Hay alguna forma de evitar escribir toda la mascara modificadora?
 
 Pasamos a investigar, de por si no cuesta mucho **escribir 64 bits para la mascara modificadora** pero hacerlo inicializar para inicializar todo en 0, **¿No es lo mismo poner 0b0 que 0b0000000000?**.
+
 
 > Luego de una breve investigacion, encotramos que: En muchos lenguajes (como Python, C o C++), el compilador simplemente ignora los ceros a la izquierda. 0b0, 0b000 y 0b00000000 son tratados como el mismo entero.
 
