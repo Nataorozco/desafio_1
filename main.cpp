@@ -4,6 +4,8 @@
 
 typedef unsigned long long paquete64;
 
+void imprimirTablero(paquete64* superMascara, int numBloques, int anchoBytes);
+
 int main()
 {
 
@@ -19,15 +21,27 @@ int main()
     tamanioTablero = 0;
     tamanioTablero = (altura/8)*(ancho/8);
     tablero = new paquete64[tamanioTablero];
-    for (int i = 1; i <= tamanioTablero ; i++) {
-        tablero[i] = 0ULL; // Inicia cada bit de paquete en 0
+    for (int indiceBloque  = 0; indiceBloque  < tamanioTablero ; indiceBloque ++) {
+        tablero[indiceBloque ] = 0ULL; // Inicia cada bit de paquete en 0
+    }
+
+    int bloquesPorFila = ancho / 8;
+
+    for (int bloqueY = 0; bloqueY < altura / 8; bloqueY++) {
+        for (int bloqueX = 0; bloqueX < ancho / 8; bloqueX++) {
+
+            int indiceBloque = bloqueY * bloquesPorFila + bloqueX;
+            paquete64 bloque = tablero[indiceBloque];
+
+            
+        }
     }
 
     //std::cout << tablero[0] << std::endl;
 
     //mostrarEstadoDeTablero(altura,ancho);
 
-    delete tablero;
+    delete[] tablero;
 
     return 0;
 }

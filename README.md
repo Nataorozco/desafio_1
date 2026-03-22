@@ -130,3 +130,4 @@ Solo como referencia dejo acontinuacion algunos de estos literales 'estandar'':
 ## Comentarios de avance
 
 En este punto tenemos establecida la creacion del trablero. Somos seres muy visuales y por lo tanto entramos a desarrollar la forma de ver el tablero en la pantalla.
+
