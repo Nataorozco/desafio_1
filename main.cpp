@@ -1,50 +1,34 @@
-#include <iostream>
-
 #include "configuracion.h"
 #include "frontend.h"
 
 typedef unsigned long long paquete64;
+typedef unsigned short paquete16;
+
+void imprimirTablero(paquete64* superMascara, int numBloques, int anchoBytes);
 
 int main()
 {
 
-    int altura, ancho, tamanioTablero;
+    int altura;
+    int ancho;
     altura = 0;
     ancho = 0;
-    tamanioTablero = 0;
+    paquete64* tablero;
 
     ingresarDimencionesTablero(&altura, &ancho);
+
+    int tamanioTablero;
+    tamanioTablero = 0;
     tamanioTablero = (altura/8)*(ancho/8);
-    paquete64* tablero = new paquete64[tamanioTablero];
-
-    for (int i = 1; i <= tamanioTablero ; i++) {
-        tablero[i] = 0b00000000'00000000'00000000'00000000'00000000'00000000'00000000'00000000; // Inicia cada bit de paquete en 0
+    tablero = new paquete64[tamanioTablero];
+    for (int indiceBloque  = 0; indiceBloque  < tamanioTablero ; indiceBloque ++) {
+        tablero[indiceBloque ] = 0ULL; // Inicia cada bit de paquete en 0
     }
 
-    paquete64 paquetePrueba = tablero[0];
-
-    unsigned char bitActual = 0b0;
-
-    for (int i = 63; i >= 0; --i) {
-        unsigned char bitActual = paquetePrueba >> i;
-        std::cout << (bitActual & 1);
-    }
-
-    //unsigned char mascaraModificadora = 0b00000001;
+    mostrarEstadoDeTablero(altura,ancho,tablero);
 
 
-    tablero[0] = (tablero[0] or mascaraModificadora);
-
-
-    //std::cout << tablero[0] << std::endl;
-
-    //for (int i = 1; i <= tamanioTablero ; i++) {
-
-    //}
-
-    //mostrarEstadoDeTablero(altura,ancho);
-
-    delete tablero;
+    delete[] tablero;
 
     return 0;
 }

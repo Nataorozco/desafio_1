@@ -115,3 +115,30 @@ Obtenemos que `paqueteBase` pasó de ser `0b00000000'00000000'00000000'00000000'
 ## ¿Hay alguna forma de evitar escribir toda la mascara modificadora?
 
 Pasamos a investigar, de por si no cuesta mucho **escribir 64 bits para la mascara modificadora** pero hacerlo inicializar para inicializar todo en 0, **¿No es lo mismo poner 0b0 que 0b0000000000?**.
+
+
+> Luego de una breve investigacion, encotramos que: En muchos lenguajes (como Python, C o C++), el compilador simplemente ignora los ceros a la izquierda. 0b0, 0b000 y 0b00000000 son tratados como el mismo entero.
+
+> Y que a veces se prefiere la versión larga cuando se están definiendo constantes para "tapar" o comparar bits específicos (bitmasking), para que todos los valores de una lista tengan el mismo ancho visual.
+
+Es aqui donde entra en juego los `sufijos de literales enteros` para este caso el sufijo `0ULL` o `0 usigned long long`, su función es indicarle al compilador exactamente qué tipo de dato debe asignar a un número escrito directamente en el código.
+
+Solo como referencia dejo acontinuacion algunos de estos literales 'estandar'':
+
+1. U o u: Unsigned int (ej. 10U). 
+2. L o l: Long (ej. 10L). 
+3. UL o ul: Unsigned long (ej. 10UL). 
+4. LL o ll: Long long (ej. 10LL). 
+5. ULL o ull: Unsigned long long (ej. 0ULL), que garantiza al menos 64 bits. 
+6. f o F: Para float (ej. 3.14f), ya que los decimales sin sufijo se consideran double por defecto.
+
+---
+## Comentarios de avance
+
+En este punto tenemos establecida la creacion del trablero. Somos seres muy visuales y por lo tanto entramos a desarrollar la forma de ver el tablero en la pantalla.
+
+--- 
+## ¿Como crear las figuras?
+
+Aqui entramos en matices importantes, ¿que tamaño deben tener las figuras?. Es posible crear funciones para agregarlas de forma automatica mediante mascaras literales. El dilema es el como modificarla luego.
+
