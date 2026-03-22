@@ -29,3 +29,11 @@ void ingresarDimencionesTablero(int* alturaPtr, int* anchoPtr){
     *alturaPtr = altura;
     *anchoPtr = ancho;
 }
+
+void crearFichas(paquete64* fichas) {
+    fichas[0] = 0b0000'0000'0000'0000;
+    fichas[1] = 0b0000'0000'0000'0000;
+    fichas[2] = 0b0000'0000'0000'0000;
+    fichas[3] = 0b0000'0000'0000'0000;
+    fichas[4] = 0b0000'0000'0000'0000;
+}
