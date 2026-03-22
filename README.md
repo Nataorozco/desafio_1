@@ -127,3 +127,6 @@ Solo como referencia dejo acontinuacion algunos de estos literales 'estandar'':
 5. ULL o ull: Unsigned long long (ej. 0ULL), que garantiza al menos 64 bits. 
 6. f o F: Para float (ej. 3.14f), ya que los decimales sin sufijo se consideran double por defecto.
 
+## Comentarios de avance
+
+En este punto tenemos establecida la creacion del trablero. Somos seres muy visuales y por lo tanto entramos a desarrollar la forma de ver el tablero en la pantalla.
