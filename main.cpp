@@ -1,4 +1,3 @@
-#include <iostream>
 #include "configuracion.h"
 #include "frontend.h"
 
