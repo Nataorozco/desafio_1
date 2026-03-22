@@ -1,4 +1,6 @@
 #include <iostream>
+#include "mecanica.h"
+
 void moverIzquierda();
 void moverDerecha();
 void bajarPieza();
@@ -34,7 +36,7 @@ void ingresarMovimiento() {
     }
 
 }
-void moverIzquierda() {
+void moverIzquierda(int x_inicio, int y_inicio, int ancho, int altura, paquete64* mascara, paquete16 ficha) {
     cout << "Realize movimiento a la izquierda" << endl;
 }
 
