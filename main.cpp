@@ -18,7 +18,7 @@ int main()
     paquete64* tablero = new paquete64[tamanioTablero];
 
     for (int i = 1; i <= tamanioTablero ; i++) {
-        tablero[i] = 0b00000000'00000000'00000000'00000000'00000000'00000000'00000000'00000000; // Inicia cada bit de paquete en 0
+        tablero[i] = 0ULL; // Inicia cada bit de paquete en 0
     }
 
     paquete64 paquetePrueba = tablero[0];
