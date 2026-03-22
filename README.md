@@ -20,6 +20,10 @@ Es una unidad de información digital que equivale a un conjunto de 8 bits.
 
 **Dato curioso:** La palabra byte viene de "bite" (mordisco en inglés), haciendo referencia a un "trozo" de datos que la computadora puede morder.
 
+USO PRINCIPAL:
+Bits para velocidad
+Bytes para almacenamiento.
+En resumen se estan creando arreglos de bytes donde cada byte el estado de 8 casillas de tablero para ahorrar espacio.
 ---
 
 **Acerca de esta actividad:** El juego Tetris debe ser desarrollado en C++.
