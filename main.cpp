@@ -3,6 +3,7 @@
 #include "frontend.h"
 
 typedef unsigned long long paquete64;
+typedef unsigned short paquete16;
 
 void imprimirTablero(paquete64* superMascara, int numBloques, int anchoBytes);
 
@@ -25,21 +26,8 @@ int main()
         tablero[indiceBloque ] = 0ULL; // Inicia cada bit de paquete en 0
     }
 
-    int bloquesPorFila = ancho / 8;
+    mostrarEstadoDeTablero(altura,ancho,tablero);
 
-    for (int bloqueY = 0; bloqueY < altura / 8; bloqueY++) {
-        for (int bloqueX = 0; bloqueX < ancho / 8; bloqueX++) {
-
-            int indiceBloque = bloqueY * bloquesPorFila + bloqueX;
-            paquete64 bloque = tablero[indiceBloque];
-
-            
-        }
-    }
-
-    //std::cout << tablero[0] << std::endl;
-
-    //mostrarEstadoDeTablero(altura,ancho);
 
     delete[] tablero;
 
