@@ -2,6 +2,7 @@
 
 using namespace std;
 
+typedef unsigned long long paquete64;
 
 void ingresarDimencionesTablero(int* alturaPtr, int* anchoPtr){
     int altura;
@@ -27,9 +28,4 @@ void ingresarDimencionesTablero(int* alturaPtr, int* anchoPtr){
     
     *alturaPtr = altura;
     *anchoPtr = ancho;
-}
-
-void creacionTablero(unsigned char* &tablero, int altura, int ancho){ // Esta funcion debe recibir la direccion en memoria del array que contiene el tablero
-    cout << "Creando Tablero con " << altura << "x" << ancho << endl;
-    tablero = new unsigned char[(altura * ancho) / 8]{0};
 }
