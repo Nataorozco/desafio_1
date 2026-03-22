@@ -5,6 +5,7 @@
     typedef unsigned short paquete16;
 
     void pintarFicha(int x_inicio, int y_inicio, int ancho, int altura, paquete64* mascara, paquete16 ficha);
+    //void desPintarFicha(int x_inicio, int y_inicio, int ancho, int altura, paquete64* mascara, paquete16 ficha);
     void procesarMovimientoActualizaTableroConAccionFichaTablero();
 
 #endif

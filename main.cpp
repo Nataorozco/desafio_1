@@ -13,14 +13,13 @@ void imprimirTablero(paquete64* superMascara, int numBloques, int anchoBytes);
 
 int main()
 {
-
     int altura;
     int ancho;
-    altura = 0;
-    ancho = 0;
     paquete64* tablero;
     paquete16* fichas[5];
     paquete16 fichaAleatoria;
+    altura = 0;
+    ancho = 0;
 
     ingresarDimencionesTablero(&altura, &ancho);
 

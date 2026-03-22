@@ -36,7 +36,7 @@ void ingresarMovimiento() {
     }
 
 }
-void moverIzquierda(int x_inicio, int y_inicio, int ancho, int altura, paquete64* mascara, paquete16 ficha) {
+void moverIzquierda() {
     cout << "Realize movimiento a la izquierda" << endl;
 }
 
