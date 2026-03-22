@@ -1,3 +1,5 @@
+#include "configuracion.h"
+
 #include <iostream>
 
 using namespace std;
@@ -25,7 +27,11 @@ void ingresarDimencionesTablero(int* alturaPtr, int* anchoPtr){
             cout << "El tamaño de ancho que inseste no es valido (solo multiplos de 8)" << endl;
         }
     } while ((ancho&7)!=0);
-    
+
     *alturaPtr = altura;
     *anchoPtr = ancho;
 }
+
+// void crearFichas (paquete16* piezas) {
+//
+// }

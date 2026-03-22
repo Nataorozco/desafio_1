@@ -50,9 +50,6 @@ void rotarPieza() {
     cout << "Rote la pieza" << endl;
 }
 
-
-
-void seleccionarUnaFichaAleatoriamente(){
-    cout << "Seleccionar una ficha" << endl;
-
+void ingregarFichaAletoriaEnTablero(){
+    // La seleccion e ingreso de ficha será impertiva en donde el concepto de ficha no es independiente
 }
