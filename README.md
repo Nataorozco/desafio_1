@@ -146,4 +146,4 @@ Aqui entramos en matices importantes, ¿que tamaño deben tener las figuras?. Es
 
 ## Video de presentacion de proyecto:
 
-[VIDEO SUNTENTACION EN DRIVE](/guides/content/editing-an-existing-page)
+[VIDEO SUNTENTACION EN DRIVE](https://drive.google.com/file/d/1ZyzSma1RmTZiBM0RmA0cb3wnuTs10YC6/view?usp=drive_link)
