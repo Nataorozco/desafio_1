@@ -16,7 +16,7 @@ int main()
     int altura;
     int ancho;
     paquete64* tablero;
-    paquete16* fichas[5];
+    paquete16 fichas[5];
     paquete16 fichaAleatoria;
     altura = 0;
     ancho = 0;
@@ -26,15 +26,15 @@ int main()
     std::srand(std::time(0));
 
     int tamanioTablero;
-    tamanioTablero = 0;
     tamanioTablero = (altura/8)*(ancho/8);
     tablero = new paquete64[tamanioTablero];
     for (int indiceBloque  = 0; indiceBloque  < tamanioTablero ; indiceBloque ++) {
         tablero[indiceBloque ] = 0ULL; // Inicia cada bit de paquete en 0
     }
 
-    crearFichas(*fichas);
-    seleccionarFichaAleatoria(*fichas, &fichaAleatoria);
+
+    crearFichas(fichas);
+    seleccionarFichaAleatoria(fichas, &fichaAleatoria);
 
     int puntoEntrada = 0;
 
