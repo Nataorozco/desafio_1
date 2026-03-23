@@ -142,3 +142,9 @@ En este punto tenemos establecida la creacion del trablero. Somos seres muy visu
 
 Aqui entramos en matices importantes, ¿que tamaño deben tener las figuras?. Es posible crear funciones para agregarlas de forma automatica mediante mascaras literales. El dilema es el como modificarla luego.
 
+---
+
+##Video de presentacion de proyecto:
+
+(VIDEO SUNTENTACION EN DRIVE)[https://drive.google.com/file/d/1ZyzSma1RmTZiBM0RmA0cb3wnuTs10YC6/view?usp=drive_link]
+
